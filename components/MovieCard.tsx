@@ -19,7 +19,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
 
   return (
     <div className="group bg-zinc-900 col-span relative h-[12vw]">
-      <img onClick={redirectToWatch} src={data.thumbnailUrl||data.backdrop_path} alt="Movie" draggable={false} className="
+      <img onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
         cursor-pointer
         object-cover
         transition
@@ -49,7 +49,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         group-hover:translate-x-[2vw]
         group-hover:opacity-100
       ">
-        <img onClick={redirectToWatch} src={data.thumbnailUrl||data.backdrop_path} alt="Movie" draggable={false} className="
+        <img onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
           cursor-pointer
           object-cover
           transition
@@ -84,10 +84,10 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             New <span className="text-white">2023</span>
           </p>
           <div className="flex flex-row mt-4 gap-2 items-center"> 
-            <p className="text-white text-[10px] lg:text-sm">{data.duration || "120"}</p>
+            <p className="text-white text-[10px] lg:text-sm">{data.duration }</p>
           </div>
           <div className="flex flex-row items-center gap-2 mt-4 text-[8px] text-white lg:text-sm">
-            <p>{data.genre || "SCi-Fi"}</p>
+            <p>{data.genre }</p>
           </div>
         </div>
       </div>
